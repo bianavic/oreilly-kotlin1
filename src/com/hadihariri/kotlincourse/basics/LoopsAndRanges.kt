@@ -37,4 +37,13 @@ fun main() {
         var x = 10
         x--
     } while (x > 10)
+
+    // loop is a label I can define
+    loop@ for (i in 1..100) {
+        for (j in 1..102) {
+            if (j % i == 0) {
+                break@loop
+            }
+        }
+    }
 }
