@@ -1,29 +1,30 @@
 package com.hadihariri.kotlincourse.basics
 
-//fun main(args: Array<String>) {
-//
-//    var myString = "Not Empty"
-//
-//    // if <if> is a expression so i can assign a val
-//    // IF conditional is TRUE will RETURN a number (20) else will return a STRING
-//    val result = if (!myString.equals("")) {
-//        // it s casting this expression to ANY
-//        println("Not Empty")
-//    }
-
-
-//        20
-//    } else {
-//        "Is Empty" // kotlin DOESNT return LAST VALUE
-//    }
-//    println(result)
-
     // WHEN = the result can have a value or a String and then execute that block
-    fun main(args: Array<String>) {
-        val result = "Value"
-        when (result) {
-            "Value" -> println("It's a Value")
-            is String -> println("Excellent")
+//    fun main(args: Array<String>) {
+//        val result = "Value"
+//        when (result) {
+//            "Value" -> {
+//                println("It's a Value") // it break down the execution
+//                println("Second statement")
+//            }
+//            is String -> println("Excellent")
+////        "Value" -> println("It's a value")
+//    }
+//
+//        // how to handle other situations
+        fun main(args: Array<String>) {
+
+            val result = "Value"
+            val whenValue = when (result) {
+                "Value" -> {
+                    println("It's a Value") // it break down the execution
+                    println("Second statement")
+                    "Returning the first when case"
+                }
+                is String -> println("Excellent")
+                else -> println("It came to this?")
 //        "Value" -> println("It's a value")
-    }
+            }
+        println(whenValue)
 }
