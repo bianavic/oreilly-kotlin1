@@ -22,6 +22,7 @@ package com.hadihariri.kotlincourse.basics
     fun main(args: Array<String>) {
         val result = "Value"
         when (result) {
+            "Value" -> println("It's a value")
             is String -> println("Excellent")
 //        "Value" -> println("It's a value")
     }
