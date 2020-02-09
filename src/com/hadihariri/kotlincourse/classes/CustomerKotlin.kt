@@ -21,21 +21,4 @@ fun main(args: Array<String>) {
     println(customer1)
     println(customer2)
 
-
-/*        val customer3 = customer1
-    // println(customer)
-
-    // ability to COPY OBJECTS
-    if (customer1 == customer2) {
-        println("They are the same")
-    }
-
-    // COPY FUNCTIONS
-    val customer4 = customer1.copy(email = "wire@wire.com")
-    println(customer4.id)
-    println(customer4.name)
-    println(customer4.email)
-
-    // customer1.copy()*/
-
 }
