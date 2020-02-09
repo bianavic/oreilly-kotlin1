@@ -54,19 +54,4 @@ fun main(args: Array<String>) {
     println(priority)
     println(priority.text())
 
-/*    val priority = Priority.NORMAL
-
-    println(priority)
-    println(priority.value)
-    // println(priority.ordinal)
-    println(Priority.CRITICAL.ordinal)
-    println(Priority.CRITICAL.name)*/
-
-/*    for (priorityInList in Priority.values()) {
-        println(priorityInList)
-    }
-
-    val p = Priority.valueOf("MAJOR")
-    println(p.ordinal)*/
-
 }
