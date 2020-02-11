@@ -12,7 +12,7 @@ class GenericRepository<T> : Repository<T> {
     }
 }
 
-interface Repo: {
+interface Repo {
     fun<EntityType> getById(id: Int): EntityType
     fun<R> getAll(): List<R> // single letters usually represent TYPE PARAMETERS
 }
