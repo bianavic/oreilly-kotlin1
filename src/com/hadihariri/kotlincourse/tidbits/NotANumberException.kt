@@ -1,6 +1,9 @@
 package com.hadihariri.kotlincourse.tidbits
 
+import java.io.BufferedReader
+import java.io.FileReader
 import java.lang.IllegalArgumentException
+import java.lang.IndexOutOfBoundsException
 
 class NotANumberException(message: String) : Throwable(message) {
 }
@@ -13,15 +16,18 @@ fun chckIsNumber(obj: Any) {
 
 fun main(args: Array<String>) {
 
-    // throw NotANumberException()
-
-    try {
-        chckIsNumber("A")
-    } catch (e: IllegalArgumentException) {
-        println("Do Nothing")
+    val buffer = BufferedReader(FileReader("input.txt"))
+    val result = try {
+        val chars = CharArray(30)
+        buffer.read(chars, 0, 40)
+    } catch (e: IndexOutOfBoundsException) {
+        println("Exception handled")
+        -1
+    } finally {
+        println("Closing")
+        buffer.close()
+        -2
     }
-    catch (e: NotANumberException) {
-        println("${e.message}")
-    }
+    println(result)
 
 }

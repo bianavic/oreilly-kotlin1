@@ -14,9 +14,6 @@ fun main(args: Array<String>) {
 
     val result = capitalsAndPopulation("Madrid")
 
-    // println(result.first)
-    // println(result.second)
-
     val countryInfo = countryInformation("Spain")
     countryInfo.third
     // println(countryInfo.third)
@@ -28,11 +25,4 @@ fun main(args: Array<String>) {
     for(( capital2, country) in listCapitalsAndCountries) {
         println("$capital2 - $country")
     }
-//
-//    println(capital)
-//    println(continent)
-//    println(population)
-
-    // DESCONSTRUCT VALUES
-
 }
