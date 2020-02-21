@@ -1,11 +1,13 @@
 package com.hadihariri.kotlincourse.tidbits
 
-class NotANumberException: Throwable() {
+import java.lang.IllegalArgumentException
+
+class NotANumberException(message: String) : Throwable(message) {
 }
 
 fun chckIsNumber(obj: Any) {
     when (obj) {
-        !is Int, Long, Float, Double -> throw NotANumberException()
+        !is Int, Long, Float, Double -> throw NotANumberException("This is not a Number")
     }
 }
 
@@ -15,8 +17,11 @@ fun main(args: Array<String>) {
 
     try {
         chckIsNumber("A")
-    } catch (e: NotANumberException) {
-        println("It is not a number")
+    } catch (e: IllegalArgumentException) {
+        println("Do Nothing")
+    }
+    catch (e: NotANumberException) {
+        println("${e.message}")
     }
 
 }
